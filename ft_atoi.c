@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:22:11 by Francis           #+#    #+#             */
-/*   Updated: 2022/10/20 19:02:01 by fcullen          ###   ########.fr       */
+/*   Updated: 2022/10/25 00:33:14 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ DESCRIPTION:
 	of the string pointed to by str to int representation.
 */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;

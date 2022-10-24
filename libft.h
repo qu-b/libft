@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:46:35 by fcullen           #+#    #+#             */
-/*   Updated: 2022/10/20 20:05:34 by fcullen          ###   ########.fr       */
+/*   Updated: 2022/10/25 00:33:42 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 
-int					ft_atoi(char *str);
+int					ft_atoi(const char *str);
 
 void				*ft_calloc(size_t count, size_t size);
 
