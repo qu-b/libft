@@ -22,9 +22,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*substr;
 	size_t		i;
-//choose between len and ft_strlen at some point...
+
 	if (!s)
 		return (0);
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
 	if (len > 2147483647)
 		len = 2147483647;
 	if ((size_t)start > ft_strlen(s))
