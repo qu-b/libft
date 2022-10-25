@@ -13,9 +13,10 @@
 #include "libft.h"
 
 // DESCRIPTION
-//      The strdup() function allocates sufficient memory for a copy of the string s1, does the copy,
-//      and returns a pointer to it.  The pointer may subsequently be used as an argument to the func-
-//      tion free(3).
+//      The strdup() function allocates sufficient memory for a
+//      copy of the string s1, does the copy, and returns a pointer
+//      to it. The pointer may subsequently  be used as an
+//		argument to the function free(3).
 
 char	*ft_strdup(const char *s1)
 {

@@ -13,11 +13,11 @@
 #include "libft.h"
 
 // DESCRIPTION
-//      The tolower() function converts an upper-case letter to the corresponding lower-case letter.
-//      The argument must be representable as an unsigned char or the value of EOF.
-
-//      Although the tolower() function uses the current locale, the tolower_l() function may be passed
-//      a locale directly. See xlocale(3) for more information.
+//      The tolower() function converts an upper-case letter to the  
+//      corresponding lowercase letter.The argument must be representable 
+//      as an unsigned char or the value of EOF. Although the tolower()  
+//      function uses the current locale, the tolower_l() function 
+// 		may be passed a locale directly. See xlocale(3) for more information.
 
 int	ft_tolower(int c)
 {

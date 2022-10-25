@@ -13,11 +13,11 @@
 #include "libft.h"
 
 // DESCRIPTION
-//      The toupper() function converts a lower-case letter to the corresponding upper-case letter.  The
-//      argument must be representable as an unsigned char or the value of EOF.
-
-//      Although the toupper() function uses the current locale, the toupper_l() function may be passed
-//      a locale directly. See xlocale(3) for more information.
+//      The toupper() function converts a lowercase letter to the
+//      corresponding uppercase letter. The argument must be representable 
+//      as an unsigned char or the value of EOF. Although the toupper()  
+//      function uses the current locale, the toupper_l() function may be  
+//		passed a locale directly. See xlocale(3) for more information.
 
 int	ft_toupper(int c)
 {
