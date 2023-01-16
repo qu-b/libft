@@ -1,75 +1,64 @@
-NAME		= libft.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/11 15:07:36 by fcullen           #+#    #+#              #
+#    Updated: 2023/01/12 09:29:10 by fcullen          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	=	libft.a
+DIRS	=	gnl libft lst printf
+SRCS	=	$(foreach dir, $(DIRS), $(wildcard $(dir)/*.c))
+OBJS	=	$(SRCS:.c=.o)
+
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
-AR			= ar rc
-RN			= ranlib
-		
-OBJ			= $(SRC:.c=.o)
-BONUS_OBJ	= $(BONUS_SRC:.c=.o)
+CFLAGS		= -Wall -Wextra -Werror -I.
 
-SRC = ft_atoi.c \
-	ft_bzero.c \
-	ft_calloc.c \
-	ft_isalnum.c \
-	ft_isalpha.c \
-	ft_isascii.c \
-	ft_isdigit.c \
-	ft_isprint.c \
-	ft_itoa.c \
-	ft_memchr.c \
-	ft_memcmp.c \
-	ft_memcpy.c \
-	ft_memmove.c \
-	ft_memset.c \
-	ft_putchar_fd.c \
-	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
-	ft_putstr_fd.c \
-	ft_split.c \
-	ft_strchr.c \
-	ft_strdup.c \
-	ft_striteri.c \
-	ft_strjoin.c \
-	ft_strlcat.c \
-	ft_strlcpy.c \
-	ft_strlen.c \
-	ft_strmapi.c \
-	ft_strncmp.c \
-	ft_strnstr.c \
-	ft_strrchr.c \
-	ft_strtrim.c \
-	ft_substr.c \
-	ft_tolower.c \
-	ft_toupper.c 
+all:		$(NAME)
 
+$(NAME):	compile $(OBJS) #c_done
+			@ar rcs $(NAME) $(OBJS)
+#			@printf "\n$(GR) => Success !$(RC)\n\n" 
 
-BONUS_SRC = ft_lstnew.c \
-	ft_lstadd_front.c \
-	ft_lstsize.c \
-	ft_lstlast.c \
-	ft_lstadd_back.c \
-	ft_lstdelone.c \
-	ft_lstclear.c \
-	ft_lstiter.c \
-	ft_lstmap.c
+.c.o:
+			@${CC} ${CFLAGS} -o $@ -c $<
+			@printf "$(GR)$(REVR) $(RC)"
 
-all: ${NAME}
+compile:
+			@echo "\n$(GR) Compiling ${NAME}$(RC)\n"
 
-${NAME}: ${OBJ}
-		ar rc $(NAME) $^
-		ranlib $(NAME)
-
-bonus : $(OBJ) $(BONUS_OBJ)
-		ar rc $(NAME) $^
-		ranlib $(NAME)
+c_done:
+			@echo "$(GR) => 100%$(RC)\n"
 
 clean:
-		${RM} ${OBJ} $(BONUS_OBJ)
+			$(RM) $(OBJS)
 
-fclean:	clean
-		${RM} ${NAME}
+fclean:		clean
+			$(RM) $(NAME)
 
-re: fclean all
+launch:		all
+			./$(NAME)
 
-.PHONY:		all bonus clean fclean re
+re:			fclean $(NAME)
+
+.PHONY:		all clean fclean launch re
+
+# **************************************************************************** #
+#								COLORS										   #
+# **************************************************************************** #
+
+BOLD = \033[1m
+ITAL = \033[3m
+UNDL = \033[4m
+BLNK = \033[5m
+REVR = \033[7m
+GR = \033[32;1m
+RE = \033[31;1m
+YE = \033[33;1m
+CY = \033[36;1m
+RC = \033[0m
