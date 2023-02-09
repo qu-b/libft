@@ -23,7 +23,7 @@ all:		$(NAME)
 
 $(NAME):	compile $(OBJS) #c_done
 			@ar rcs $(NAME) $(OBJS)
-#			@printf "\n$(GR) => Success !$(RC)\n\n" 
+			@printf "\n\n" 
 
 .c.o:
 			@${CC} ${CFLAGS} -o $@ -c $<
