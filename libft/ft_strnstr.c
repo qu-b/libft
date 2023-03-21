@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:35:00 by fcullen           #+#    #+#             */
-/*   Updated: 2023/01/10 16:50:02 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/03/21 12:59:12 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	
 	if (!*needle)
 		return ((char *)haystack);
 	while (haystack[i] && i < len)

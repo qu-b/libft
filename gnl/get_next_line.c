@@ -6,11 +6,15 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 13:01:59 by fcullen           #+#    #+#             */
-/*   Updated: 2023/01/12 10:23:43 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/03/21 13:01:04 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
+
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 5
+#endif
 
 // In get_next_line we read() text from a file into a buffer. The data in the 
 // buffer is moved incrementally into a temporary variable called next_line.

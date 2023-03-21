@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:46:35 by fcullen           #+#    #+#             */
-/*   Updated: 2023/01/12 10:20:50 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/03/21 13:00:43 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,6 @@
 # include <sys/stat.h> 
 # include <fcntl.h>
 # include <limits.h>
-
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 5
-#endif
 
 # define FT_INT_MIN			(-2147483648)
 # define FT_INT_MAX			(2147483647)

@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:46:25 by fcullen           #+#    #+#             */
-/*   Updated: 2023/01/10 16:50:02 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/03/21 13:48:20 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > 2147483647)
 		len = 2147483647;
 	if ((size_t)start > ft_strlen(s))
-	{
-		substr = malloc(sizeof(char));
-		if (!substr)
-			return (0);
-		substr[0] = 0;
-		return (substr);
-	}
-	if (len > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	substr = malloc(sizeof(char) * (len + 1));
 	if (!substr)
@@ -41,6 +35,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while ((char)s[start] && i < len)
 		substr[i++] = (char)s[start++];
-	substr[i] = 0;
+	substr[i] = '\0';
 	return (substr);
 }
