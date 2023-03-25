@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:45:45 by fcullen           #+#    #+#             */
-/*   Updated: 2023/01/11 18:37:46 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/03/25 16:52:31 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 static int	check_separator(char c, char d)
 {
-	if (c == d)
+	if (c == '\0' || c == d)
 		return (1);
 	return (0);
 }
