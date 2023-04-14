@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putlhex.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: fcullen <zaphod@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:30:34 by fcullen           #+#    #+#             */
 /*   Updated: 2023/01/10 16:50:15 by fcullen          ###   ########.fr       */

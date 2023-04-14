@@ -3,7 +3,7 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+         #
+#    By: fcullen <zaphod@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 15:07:36 by fcullen           #+#    #+#              #
 #    Updated: 2023/01/12 09:29:10 by fcullen          ###   ########.fr        #
