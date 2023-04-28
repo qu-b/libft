@@ -108,11 +108,11 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
+	if (!s1)
+		s1 = ft_strdup("\0");
 	s3 = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!s3)
 		return (0);
-	if (!s1)
-		s1 = ft_strdup("\0");
 	while (s1[i])
 	{
 		s3[i] = s1[i];
