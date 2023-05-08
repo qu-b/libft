@@ -10,20 +10,20 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libft.a
-DIRS	=	gnl libft lst printf
-SRCS	=	$(foreach dir, $(DIRS), $(wildcard $(dir)/*.c))
-OBJS	=	$(SRCS:.c=.o)
+NAME		=	libft.a
+DIRS		=	gnl libft lst printf
+SRCS		=	$(foreach dir, $(DIRS), $(wildcard $(dir)/*.c))
+OBJS		=	$(SRCS:.c=.o)
 
 CC			= gcc
 RM			= rm -f
-CFLAGS		= -Wall -Wextra -Werror -I.
+CFLAGS		= -Wall -Wextra -Werror -I./inc/
 
 all:		$(NAME)
 
-$(NAME):	compile $(OBJS) #c_done
+$(NAME):	compile $(OBJS) c_done
 			@ar rcs $(NAME) $(OBJS)
-			@printf "\n\n" 
+			@printf "\n" 
 
 .c.o:
 			@${CC} ${CFLAGS} -o $@ -c $<
@@ -33,20 +33,17 @@ compile:
 			@echo "\n$(GR) Compiling ${NAME}$(RC)\n"
 
 c_done:
-			@echo "$(GR) => 100%$(RC)\n"
+			@echo "\n$(GR)100%$(RC)"
 
 clean:
-			$(RM) $(OBJS)
+			@$(RM) $(OBJS)
 
 fclean:		clean
-			$(RM) $(NAME)
-
-launch:		all
-			./$(NAME)
+			@$(RM) $(NAME)
 
 re:			fclean $(NAME)
 
-.PHONY:		all clean fclean launch re
+.PHONY:		all clean fclean re
 
 # **************************************************************************** #
 #								COLORS										   #
