@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fcullen <zaphod@student.42lausanne.ch>    +#+  +:+       +#+         #
+#    By: zaphod <zaphod@student.42lausanne.ch>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/11 15:07:36 by fcullen           #+#    #+#              #
-#    Updated: 2023/01/12 09:29:10 by fcullen          ###   ########.fr        #
+#    Created: 2023/01/11 15:07:36 by zaphod           #+#    #+#              #
+#    Updated: 2023/01/12 09:29:10 by zaphod          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
